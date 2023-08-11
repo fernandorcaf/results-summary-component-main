@@ -1,0 +1,212 @@
+:root{
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+p{
+    font-size: 14px;
+}
+
+#container{
+    display: flex;
+    width: 36em;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 25em;
+    border-radius: 1.5em;
+    box-shadow: 2em 2em 2em rgba(17, 36, 212, 0.05);
+}
+
+#result-div{
+    color: var(--pale-blue);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+    background-color: var(--light-slate-blue);
+    padding: 2em 2.7em 2em;
+    gap: 0.5em;
+    color: var(--white);
+    border-radius: 1.5em;
+    background-image: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+}
+
+#result-div span{
+    font-size: 0.8em;
+    color: var(--light-lavender);
+}
+#result-div p, #result-div h3{
+    color: var(--light-lavender);
+}
+#result-div h3{
+    margin-bottom: 1em;
+}
+
+#result-div h1{
+    font-weight: 400;
+    font-size: 1.7em;
+}
+
+#general-score-div{
+    background-image: linear-gradient(var(--violet-blue), var(--persian-blue));
+    border-radius: 50%;
+    height: 9.5em;
+    width: 9.5em;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+
+}
+
+#general-score-div h1{
+    font-size: 3em;
+}
+
+#summary-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    padding: 2em;
+    gap: 1em;
+}
+#summary-div h3{
+    color: var(--dark-gray-blue);
+}
+#scores-div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+}
+.score-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    border-radius: 0.5em;
+    font-size: 0.8em;
+}
+.score-div span{
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.454);
+}
+.score-div strong{
+    color: var(--dark-gray-blue);
+    font-weight: 800
+}
+
+.img-name-div{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+
+}
+#reaction-score-div{
+    background-color: hsla(0, 100%, 67%, 10%);;
+}
+
+#reaction-score-div h3{
+    color: var(--light-red);
+}
+
+
+#memory-score-div{
+    background-color: hsla(39, 100%, 56%, 10%);
+}
+
+#memory-score-div h3{
+    color: var(--orangey-yellow);
+}
+
+#verbal-score-div{
+    background-color: hsla(166, 100%, 37%, 10%);
+}
+
+#verbal-score-div h3{
+    color: var(--green-teal);
+}
+
+#visual-score-div{
+    background-color: hsla(234, 85%, 45%, 10%); 
+}
+
+#visual-score-div h3{
+    color: var(--cobalt-blue);
+}
+
+#summary-div a{
+    text-decoration: none;
+    color: var(--pale-blue);
+    background: var(--dark-gray-blue);
+    text-align: center;
+    width: 100%;
+    padding: 0.7em;
+    border-radius: 1.5em;
+}
+
+#summary-div a:hover{
+    background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+}
+
+@media (max-width: 500px){
+    #container{
+        width: 100%;
+        height: 100%;
+        flex-wrap: wrap;
+    }
+    #summary-div{
+        width: 100%;
+    }
+
+    #result-div{
+        width: 100%;
+        border-radius: 0 0 1.5em 1.5em;
+        padding-left: 3.5em;
+        padding-right: 3.5em;
+        height: 45%;
+    }
+
+    #general-score-div{
+        margin-bottom: 1em;
+    }
+    #result-div p{
+        font-size: 1.1em;
+    }
+
+    #scores-div{
+        gap: 1em;
+    }
+
+    #summary-div a{
+        padding: 1.2em 0.6em 1.2em;
+        border-radius: 2em;
+    }
+    .score-div{
+        padding: 1.5em;
+    }
+
+    
+}
